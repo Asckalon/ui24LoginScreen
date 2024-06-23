@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js"></script>
+    <title>Comunidade Atos</title>
+</head>
+<body>
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Comunidade Atos<br>Bem-vindo Midianita!</h1>
+            <img src="work.svg" class="left-login-img" alt="work">
+        </div>
+
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <form id="loginForm">
+                    <div class="textfield">
+                        <label for="username">Usuário:</label>
+                        <input id="username" name="username" placeholder="Usuário">
+                    </div>
+                    <div class="textfield">
+                        <label for="password">Senha:</label>
+                        <input id="password" type="password" name="password" placeholder="Senha">
+                    </div>
+                    <button class="btn-login" type="submit">LOGIN</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Correção: "preventDefault" com "v"
+
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+
+            if (username === 'Kevin Martins' && password === 'MesaComunidadeAtos2024') {
+                window.location.href = 'https://www.google.com'; // Redireciona para o Google
+            } else {
+                alert('Dados incorretos, vou mandar uma notificação de invasor para o Kevin!');
+            }
+        });
+    </script>
+</body>
+</html>
